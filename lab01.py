@@ -1,3 +1,5 @@
+import re
+
                #  LAB 01
 # 1
 # def fill_incresed(length, start):
@@ -21,14 +23,14 @@
 
 # 4
 
-# def dev_by_three(x):
-#     if x%3 == 0 and x%5 == 0 :
-#         print("FizzBuzz")
-#     elif x%5 == 0:
-#         print("Buzz")
-#     elif x%3 == 0:
-#         print("Fizz")
-# dev_by_three(13)
+def dev_by_three(x):
+    if x%3 == 0 and x%5 == 0 :
+        print("FizzBuzz")
+    elif x%5 == 0:
+        print("Buzz")
+    elif x%3 == 0:
+        print("Fizz")
+dev_by_three(15)
 
 # 5
 # def reverse_str(my_str):
@@ -53,15 +55,26 @@
 # print(f"the Circ of circle is : ",find_cir(my_in2))
 
 # 7
-my_inp = input("Enter your Name: ")
-if my_inp == "" or my_inp == " ":
-    print("This is A not valid Name Empty string.")
-else:
-    print(f"Your Name is: ", my_inp)
+# my_inp = input("Enter your Name: ")
+# if my_inp == "" or my_inp == " ":
+#     print("This is A not valid Name Empty string.")
+# else:
+#     print(f"Your Name is: ", my_inp)
 
-my_inp2 = input("Enter your Email: ")
-is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org)", my_inp2)
-if is_email:
-    print("This is A valid Email.")
-else:
-    print("This is A not valid Email.")
+# my_inp2 = input("Enter your Email: ")
+# is_email = re.search(r"[A-z0-9\.]+@[A-z0-9]+\.(com|net|org)", my_inp2)
+# if is_email:
+#     print("This is A valid Email.")
+# else:
+#     print("This is A not valid Email.")
+
+
+# 8
+my_str = "itimohameditiiti"
+count = 0
+word_pattern = "iti"
+
+for i in re.findall(word_pattern, my_str):
+    count+=1
+print(count)
+    
